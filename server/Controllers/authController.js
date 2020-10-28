@@ -8,15 +8,14 @@ const bcrypt=require('bcryptjs')
      register: async(req, res) => {
          const {email, password} = req.body,
             db = req.app.get('db');
-        
+            console.log(req.body)
         const foundUser = await db.check_user({email});
         if(foundUser[0]){
             return res.status(400).send('Email already in use.')
         }
-
         let salt = bcrypt.genSaltSync(10),
-            hash = bcrypt.hashSync(password, salt);
-
+            hash = bcrypt.hashSync(password,salt);
+console.log(hash)
         const newUser = await db.register_user({email, hash});
         req.session.user = newUser[0];
         res.status(201).send(req.session.user);

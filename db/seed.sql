@@ -4,3 +4,13 @@ CREATE TABLE test_user (
     password VARCHAR(250)
 );
 
+-- HAS USERNAME COLUMN AS WELL! 
+
+
+
+CREATE TABLE user_daily_input (
+    user_id SERIAL PRIMARY KEY,
+    daily_schedule TEXT,
+    today_i_will TEXT,
+    today_i_achieved TEXT, 
+);

@@ -40,3 +40,23 @@
   color: white;
   font-size: 65px;
 }
+
+.nav{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background-color: darkblue;
+  color: white;
+}
+
+.dashboard{
+  background-color: darkgray;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
